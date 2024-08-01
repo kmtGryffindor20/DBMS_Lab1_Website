@@ -72,17 +72,6 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-    
-    #assignments h2 {
-        font-size: 1.5em;
-    }
-}
-
 #lab{
     font-weight: 60;
     margin-left:90px;
@@ -93,4 +82,32 @@ footer {
 .labschedule{
     font-weight: 60;
     font-size: 30px;
+}
+
+.lab-table{
+    table-layout: auto;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    #assignments h2 {
+        font-size: 1.5em;
+    }
+
+    #assignments{
+        margin: 10px;
+    }
+
+    .lab-table{
+        table-layout: auto;
+        width: 100%;
+        overflow-x: scroll;
+        align-items: center;
+    }
+    #lab{
+        margin: 10px;
+    }
 }
