@@ -207,10 +207,10 @@ body {
 /* Keyframes for the scrolling effect */
 @keyframes scroll {
     0% {
-        transform: translateX(100%); /* Start position off the screen to the right */
+        transform: translateX(0%); /* Start position off the screen to the right */
     }
     100% {
-        transform: translateX(-100%); /* End position off the screen to the left */
+        transform: translateX(-105%); /* End position off the screen to the left */
     }
 }
 
