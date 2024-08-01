@@ -1,0 +1,96 @@
+/* Base styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    font-weight: 60; /* Note: Adjusting font weight here will affect all text */
+}
+
+/* Background container */
+.background-container {
+    background-image: url('assets/header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+
+
+main {
+    padding: 20px; /* Increased padding for better spacing */
+    background-color: #ffffff;
+}
+
+/* Assignments section */
+#assignments {
+    margin-bottom: 40px; /* Increased space below the assignments section */
+    padding: 20px; /* Added padding for spacing inside the section */
+    font-weight: 60; /* Consider using standard font-weight values */
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.assnHeading {
+    font-size: 40px;
+    margin-bottom: 20px; /* Added space below the heading */
+}
+
+.assignment {
+    margin-bottom: 30px; /* Space between individual assignments */
+    padding: 15px; /* Optional: add padding inside assignment blocks */
+    border: 1px solid #ddd; /* Optional: add border for visual separation */
+    border-radius: 8px; /* Optional: add rounded corners for style */
+    background-color: #caeeff; /* Optional: background color for each assignment */
+}
+
+.assignment h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #111738;
+    font-weight: 60; /* Adjust as needed */
+}
+
+.assignment a {
+    color: rgb(73, 19, 19);
+    text-decoration: none;
+    font-weight: bold; /* Adjust as needed */
+}
+
+.assignment a:hover {
+    color: rgb(193, 92, 10);
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    #assignments h2 {
+        font-size: 1.5em;
+    }
+}
+
+#lab{
+    font-weight: 60;
+    margin-left:90px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.labschedule{
+    font-weight: 60;
+    font-size: 30px;
+}
