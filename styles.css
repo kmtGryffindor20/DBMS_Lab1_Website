@@ -227,6 +227,32 @@ body {
     font-size: 18px;/* Adjust the left margin as needed */
 }
 
+.course-buttons {
+    margin-top: 50px;
+    margin-left: 239px;
+}
+
+.course-buttons button {
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 20px;  /* Padding for better appearance */
+    border: none;        /* Remove default border */
+    background-color: #c1651a; /* Button background color */
+    color: white;        /* Text color */
+    cursor: pointer;     /* Pointer cursor on hover */
+    font-size: 16px;  
+    font-family: 'Quicksand', sans-serif; /* Font family */
+    margin-right: 15px;  /* Space between buttons */
+}
+
+.course-buttons button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+.course-buttons button:hover {
+    background-color: #8c5210; /* Change background color on hover */
+}
+
+
 @media screen and (max-width: 768px) {
     .nav-area {
         gap: 10px;
