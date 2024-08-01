@@ -2,9 +2,30 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    color: #333; /* Set a default text color */
+}
+
+/* Specific styling for course title and heading */
+.course-title, .course-heading {
+    margin-left: 120px; /* Adjust margin as needed */
+}
+
+.course-title {
+    font-size: 3rem; /* Adjust font size as needed */
+    font-weight: 400; /* Bold weight for emphasis */
+    margin-top: 1rem; 
+    color: white;/* Adjust margin-top if needed */
+}
+
+.course-heading p {
+    font-size: 1.2rem; /* Adjust font size as needed */
+    font-weight: 400; /* Regular weight */
+    margin-top: 0.5rem;
+    color: white;/* Adjust margin-top if needed */
 }
 
 .nav-area{
@@ -13,9 +34,10 @@ body{
     justify-content: space-around;
     align-items: center;
     position: sticky;
-    background-color: white;
+    background-color: rgb(226, 225, 225);
     top: 0;
     margin-bottom: 0;
+    border-bottom: 1px solid #e0e0e0; /* Thin line below navbar */
 }
 
 .nav-list{
@@ -27,9 +49,30 @@ body{
     gap: 10px;
 }
 
+/* Style for <a> tags inside .nav-link */
+.nav-link a {
+    color: rgb(152, 59, 59); /* Set the link color to red */
+    text-decoration: none; /* Remove the underline */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for color and underline */
+    font-weight: 500;
+}
+
+.nav-link a:hover {
+    /* color: darkred; Change the link color to dark red on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.menu-button{
+    display: none;
+}
+
+
+
 .section-header{
     text-align: center;
     padding: 2rem 0;
+    font-weight: 500;
+    font-size: 40px;
 }
 
 .section-content{
@@ -47,14 +90,23 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;  
+    color: white;
     
 }
+
 
 .topic-link{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 4rem ;
+    padding: 4rem 0;
+}
+
+.topic-link:hover{
+    background-color: #b8b8b85a;
+    border-radius: 10px;
+    transition: 0.5s;
+    scale: 1.1;
 }
 
 .topic-icon{
@@ -63,26 +115,202 @@ body{
 }
 
 .instructor-image{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
     border-radius: 50%;
     background-color: #f0f0f0;
 }
 
-#overview{
+#overview {
     padding: 8rem 0;
+    background-color: black; /* Background color */
+    background-image: 
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 40%), /* Gradient to fade out */
+        url('assets/curr.jpg'); /* Background image */
+    background-position: right center; /* Position the image on the right */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-size: fit; /* Cover the section area with the image */
 }
+
 
 #topics{
     background-color: #f0f0f0;
     padding: 8rem 0;
+    background-image: url('assets/portfolio-1.jpg');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 18px;
+    
 }
 
 #instructor{
-    padding: 8rem 0;
+    padding: 0rem 0;
+    font-size: 19px;
 }
 
-#schedule{
-    background-color: #f0f0f0;
-    padding: 8rem 0;
+#about {
+    background-color: #f0f0f0; /* Background color as a fallback */
+    background-image: url('assets/bg-callout.jpg'); /* Path to the image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    padding: 8rem 0; /* Maintain existing padding */
+    margin-top: 50px;
+}
+
+/* Style for the review carousel */
+.review-carousel {
+    display: flex;
+    overflow: hidden; /* Hide overflow to create the scrolling effect */
+    position: relative; /* Position relative to control absolute children */
+    width: 100%; /* Ensure it takes up the full width */
+    white-space: nowrap; /* Prevent wrapping of content */
+}
+
+/* Adjust width of the carousel container */
+.review-slide-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of content */
+    width: 100%; /* Ensure it takes up the full width */
+    animation: scroll 20s linear infinite; /* Apply scrolling animation */
+}
+
+/* Style for each review slide */
+.review-slide {
+    flex: 0 0 auto;
+    padding: 1rem; /* Adjust padding as needed */
+    background-color: #f0e9e9; /* Background color */
+    border: 1px solid #ffffff; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size for the text */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 1rem; /* Space between image and text */
+    max-width: 400px; /* Width for review slides */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: hidden; /* Hide overflowing text */
+    white-space: normal; /* Allow text wrapping */
+    margin-bottom: 120px;
+}
+
+/* Style for review image */
+.review-image {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure the image covers the area */
+    background-color: #ccc; /* Background color for image area */
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start position off the screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End position off the screen to the left */
+    }
+}
+
+.about-course {
+    margin-left: 15rem; /* Adjust the left margin as needed */
+    margin-right: 15rem;
+    font-size: 40px;
+}
+
+/* Margin for the content within the section */
+.about-content {
+    margin-left: 15rem;
+    margin-right: 15rem; 
+    font-size: 18px;/* Adjust the left margin as needed */
+}
+
+@media screen and (max-width: 768px) {
+    .nav-area {
+        gap: 10px;
+    }
+
+    .nav-list {
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        right: 12%;
+        background-color: rgb(226, 225, 225);
+        flex-direction: column;
+        gap: 10px;
+        transition: all 0.3s ease;
+        padding: 2rem;
+    }
+
+    .nav-list.open {
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+
+    .menu-button {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-link {
+        display: block;
+        text-align: center;
+    }
+
+    .course-title, .course-heading {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .about-course, .about-content {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .about-course {
+        font-size: 30px;
+    }
+
+    .about-content {
+        font-size: 20px;
+    }
+
+    .section-content {
+        gap: 10px;
+    }
+
+    .topic-list {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-link {
+        padding-bottom: 2rem;
+    }
+
+    .instructor-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .review-slide {
+        max-width: 300px;
+    }
+
+    .review-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .about-course {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .about-content {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }

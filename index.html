@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSE361: Database Management Systems</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="./styles.css">
     <link
       rel="stylesheet"
@@ -17,18 +18,22 @@
     <header class="nav-area">
         <h1>DBMS</h1>
         <nav>
+            <div class="menu-button">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-list">
                 <li class="nav-link"><a href="#overview">Overview</a></li>
                 <li class="nav-link"><a href="#topics">Topics</a></li>
                 <li class="nav-link"><a href="#instructor">Instructor</a></li>
-                <li class="nav-link"><a href="#schedule">Schedule</a></li>
+                <li class="nav-link"><a href="#about">About</a></li>
+                <li class="nav-link"><a href="#reviews">Reviews</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="overview">
-            <h2 class="section-header">CSE361 - DBMS</h2>
-            <div class="section-content">
+            <h2 class="course-title">CSE361 - DBMS</h2>
+            <div class="course-heading">
                 <p>A Database Management Systems Course</p>
             </div>
         </section>
@@ -37,45 +42,96 @@
             <div class="section-content">
                 <ul class="topic-list">
                     <li class="topic-link">
-                        <i class="fas fa-circle-info topic-icon">
-                        </i>
-                        Introduction to Databases</li>
+                        <i class="fas fa-circle-info topic-icon"></i>
+                        Introduction to Databases
+                    </li>
                     <li class="topic-link">
-                        <i class="fab fa-buromobelexperte topic-icon">
-                        </i>
-                        Relational Model and Algebra</li>
+                        <i class="fab fa-buromobelexperte topic-icon"></i>
+                        Relational Model and Algebra
+                    </li>
                     <li class="topic-link">
                         <i class="fas fa-database topic-icon"></i>
-                        SQL and Advanced SQL</li>
+                        SQL and Advanced SQL
+                    </li>
                     <li class="topic-link">
                         <i class="fas fa-diagram-project topic-icon"></i>
-                        Database Design and ER Model</li>
+                        Database Design and ER Model
+                    </li>
                     <li class="topic-link">
                         <i class="fas fa-table topic-icon"></i>
-                        Normalization</li>
+                        Normalization
+                    </li>
                     <li class="topic-link">
                         <i class="fas fa-hashtag topic-icon"></i>
-                        Indexing and Hashing</li>
+                        Indexing and Hashing
+                    </li>
                     <li class="topic-link">
                         <i class="fas fa-hard-drive topic-icon"></i>
-                        Transactions and Concurrency Control</li>
+                        Transactions and Concurrency Control
+                    </li>
                     <li class="topic-link">
                         <i class="fas fa-lock topic-icon"></i>
-                        Database Security</li>
+                        Database Security
+                    </li>
                 </ul>
             </div>
         </section>
         <section id="instructor">
             <h2 class="section-header">Instructor</h2>
             <div class="section-content">
-                <img class="instructor-image" src="https://www.iitbhu.ac.in/sites/default/files/styles/medium/public/pictures/2021-01/RaviPhoto2.jpg?itok=egSTEDQ3" alt="Instructor">
-                <p>Dr. Ravindranath Chowdhary</p>
+                <img class="instructor-image" src="https://lh4.googleusercontent.com/fLLsY5wusVKMaGuq9UE5ngCdsfy5dlU-LmDGjdod_6OTX8jbBAIR5uaqU_aG7xBy-qSw1jV9KIFOztn0wogcOIgU3YD2TPHa-G_nuV8mazNRCD85=w1280" alt="Instructor">
+                <a href="https://sites.google.com/site/ravindranathchowdaryshomepage/" style="text-decoration: none;"><p>Dr. Ravindranath Chowdary</p></a>
             </div>
         </section>
-        <section id="schedule">
-            <h2 class="section-header">Course Schedule</h2>
-            <div class="section-content">
-                <p>The course is scheduled for Monday, Tuesday and Wednesday from 10:00 AM to 10:55 AM.</p>
+        
+        <section id="about">
+            <h2 class="about-course">About the Course</h2>
+            <div class="about-content">
+                <p>Earlier, databases could only manage distinct, individually prepared chunks of data. Today’s sophisticated systems can handle various types of less structured data and connect them in more complex ways. End users can now create, protect, read, update, and remove data in a database with the help of a DBMS.
+
+                    The database management system is the link between the databases and the end users or application programs. It makes sure that the data is always organized and easy to find. Data is managed by the DBMS, is accessible, locked, and modifiable by the database engine, and has a logical structure defined by the database schema.</p>
+                    <p>The CSE-361 course will give you an comprehensive industry level knowledge of this incredibly important tool.
+                <b><p>The course is scheduled for Monday, Tuesday and Wednesday from 10:00 AM to 10:55 AM.</p></b>
+            </div>
+        </section>
+        <section id="reviews">
+            <h2 class="section-header">Reviews</h2>
+            <div class="review-carousel">
+                <div class="review-slide-container">
+                    <div class="review-slide">
+                        <img src="assets/c.png" alt="Reviewer Photo" class="review-image">
+                        "Great course! Highly recommended." - Alice
+                    </div>
+                    <div class="review-slide">
+                        <img src="assets/d.png" alt="Reviewer Photo" class="review-image">
+                        "Informative and well-structured." - Bob
+                    </div>
+                    <div class="review-slide">
+                        <img src="assets/alice.png" alt="Reviewer Photo" class="review-image">
+                        "Excellent material and teaching." - Carol
+                    </div>
+                    <div class="review-slide">
+                        <img src="assets/bob.png" alt="Reviewer Photo" class="review-image">
+                        "The best DBMS course I've taken." - Dave
+                    </div>
+                    <!-- Duplicate content for seamless scrolling -->
+                    <div class="review-slide">
+                        <img src="assets/c.png" alt="Reviewer Photo" class="review-image">
+                        "Great course! Highly recommended." - Alice
+                    </div>
+                    <div class="review-slide">
+                        <img src="assets/d.png" alt="Reviewer Photo" class="review-image">
+                        "Informative and well-structured." - Bob
+                    </div>
+                    <div class="review-slide">
+                        <img src="assets/alice.png" alt="Reviewer Photo" class="review-image">
+                        "Excellent material and teaching." - Carol
+                    </div>
+                    <div class="review-slide">
+                        <img src="assets/bob.png" alt="Reviewer Photo" class="review-image">
+                        "The best DBMS course I've taken." - Dave
+                    </div>
+                </div>
             </div>
         </section>
     </main>
